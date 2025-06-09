@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 // Enhanced Node component with better visual design
 const Node = ({ node, highlight, depth = 0, position = 'root' }) => {
@@ -280,6 +281,8 @@ const AVLTreeVisualizer = () => {
             >
               🔄 Refresh
             </button>
+            <Link to="/application" className="bg-gradient-to-r from-slate-500 to-slate-600 text-white px-6 py-3 rounded-xl font-semibold">Application</Link>
+            
           </div>
         </div>
 
