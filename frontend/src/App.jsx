@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import AVLTreeVisualizer from './AvlTree'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AVLApplication from './Application'
+import AutoSuggestSearch from './Song'
 
 function App() {
  
@@ -14,6 +15,7 @@ function App() {
   <Routes>
       <Route path="/" element={<AVLTreeVisualizer />} />
         <Route path="/application" element={<AVLApplication />} />
+        <Route path="/song" element={<AutoSuggestSearch />} />
     
   </Routes>
   </BrowserRouter>
