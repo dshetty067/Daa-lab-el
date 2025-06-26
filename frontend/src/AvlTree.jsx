@@ -272,6 +272,7 @@ const AVLTreeVisualizer = () => {
               🔄 Refresh
             </button>
             <Link to="/application" className="bg-gradient-to-r from-slate-500 to-slate-600 text-white px-6 py-3 rounded-xl font-semibold">Application</Link>
+            <Link to="/song" className="bg-gradient-to-r from-slate-500 to-slate-600 text-white px-6 py-3 rounded-xl font-semibold">Auto-Suggest Search Engine</Link>
             
           </div>
         </div>

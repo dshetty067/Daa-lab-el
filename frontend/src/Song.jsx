@@ -644,34 +644,37 @@ const AutoSuggestSearch = () => {
           </div>
         </div>
 
-        {/* AVL Tree Visualization */}
-        {showTree && (
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
-            <h3 className="text-xl font-bold text-slate-800 mb-6 text-center">
-              AVL Tree Structure (Lexicographically Sorted)
-            </h3>
-            
-            <div className="flex justify-center overflow-x-auto">
-              {searchTree.root ? (
-                <div className="py-8 min-w-full">
-                  <AVLTreeNode 
-                    node={searchTree.root} 
-                    highlightedWords={highlightedWords}
-                    searchPrefix={searchTerm}
-                  />
-                </div>
-              ) : (
-                <div className="text-center py-16">
-                  <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-slate-200 to-slate-300 rounded-full flex items-center justify-center">
-                    <Search className="w-8 h-8 text-slate-500" />
-                  </div>
-                  <h4 className="text-xl font-semibold text-slate-600 mb-2">No Words in Dictionary</h4>
-                  <p className="text-slate-500">Add some words to see the AVL tree structure!</p>
-                </div>
-              )}
+     {/* AVL Tree Visualization */}
+{showTree && (
+  <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+    <h3 className="text-xl font-bold text-slate-800 mb-6 text-center">
+      AVL Tree Structure (Lexicographically Sorted)
+    </h3>
+
+    <div className="w-full overflow-x-auto">
+      <div className="min-w-max flex justify-center">
+        {searchTree.root ? (
+          <div className="py-8">
+            <AVLTreeNode 
+              node={searchTree.root} 
+              highlightedWords={highlightedWords}
+              searchPrefix={searchTerm}
+            />
+          </div>
+        ) : (
+          <div className="text-center py-16">
+            <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-slate-200 to-slate-300 rounded-full flex items-center justify-center">
+              <Search className="w-8 h-8 text-slate-500" />
             </div>
+            <h4 className="text-xl font-semibold text-slate-600 mb-2">No Words in Dictionary</h4>
+            <p className="text-slate-500">Add some words to see the AVL tree structure!</p>
           </div>
         )}
+      </div>
+    </div>
+  </div>
+)}
+
       </div>
     </div>
   );
