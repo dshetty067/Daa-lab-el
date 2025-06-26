@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 // Enhanced Node component with better visual design
 const Node = ({ node, highlight, depth = 0, position = 'root' }) => {
@@ -137,17 +138,7 @@ const TreeStats = ({ tree, theoreticalHeight }) => {
           <div className="text-2xl font-bold text-purple-600">
             {theoreticalHeight !== null ? theoreticalHeight.toFixed(2) : 'N/A'}
           </div>
-          <div className="text-sm text-slate-600">Theoretical Height</div>
-        </div>
-        
-        <div className="text-center p-3 bg-white rounded-lg shadow-sm">
-          <div className={`text-2xl font-bold ${
-            theoreticalHeight && actualDepth <= theoreticalHeight + 1 
-              ? 'text-green-600' 
-              : 'text-red-600'
-          }`}>
-            {theoreticalHeight && actualDepth <= theoreticalHeight + 1 ? '✓' : '✗'}
-          </div>
+         
           <div className="text-sm text-slate-600">Balanced</div>
         </div>
       </div>
@@ -280,6 +271,8 @@ const AVLTreeVisualizer = () => {
             >
               🔄 Refresh
             </button>
+            <Link to="/application" className="bg-gradient-to-r from-slate-500 to-slate-600 text-white px-6 py-3 rounded-xl font-semibold">Application</Link>
+            
           </div>
         </div>
 
