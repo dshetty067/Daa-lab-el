@@ -138,17 +138,7 @@ const TreeStats = ({ tree, theoreticalHeight }) => {
           <div className="text-2xl font-bold text-purple-600">
             {theoreticalHeight !== null ? theoreticalHeight.toFixed(2) : 'N/A'}
           </div>
-          <div className="text-sm text-slate-600">Theoretical Height</div>
-        </div>
-        
-        <div className="text-center p-3 bg-white rounded-lg shadow-sm">
-          <div className={`text-2xl font-bold ${
-            theoreticalHeight && actualDepth <= theoreticalHeight + 1 
-              ? 'text-green-600' 
-              : 'text-red-600'
-          }`}>
-            {theoreticalHeight && actualDepth <= theoreticalHeight + 1 ? '✓' : '✗'}
-          </div>
+         
           <div className="text-sm text-slate-600">Balanced</div>
         </div>
       </div>
